@@ -9,6 +9,11 @@ import SwiftUI
 
 
 struct WelcomeScreenView: View {
+    
+    @EnvironmentObject var  vm: PageViewModel
+    
+    @State var isToHome: Bool = false
+    
     var body: some View {
         
         NavigationView {
@@ -52,14 +57,25 @@ struct WelcomeScreenView: View {
                     HStack {
                         
                         Spacer()
+
+                        //控制ContentView实现页面跳转
+                        NextBtnRed()
+                            .environmentObject(vm)
+
+                        //改变参数后实现页面跳转
+                        NavigationLink(destination: HomeScreenView(), isActive: $isToHome) {
+                            
+                            NextBtn(isGoHome: $isToHome)
+                        }
                         
+                        //直接跳转
                         NavigationLink {
-    
+                            
                             HomeScreenView()
-    
+                            
                         } label: {
                             
-                            NextBtn()
+                            NextView()
                         }
 
                     }

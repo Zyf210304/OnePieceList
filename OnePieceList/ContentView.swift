@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var  vm = PageViewModel()
     var body: some View {
         
         VStack {
             
-            WelcomeScreenView()
+            if vm.App_first {
+                
+                WelcomeScreenView().environmentObject(vm)
+                    .transition(AnyTransition.scale.animation(.easeInOut(duration: 0.4)))
+            } else {
+                
+                HomeScreenView().environmentObject(vm)
+                    .transition(AnyTransition.scale.animation(.linear(duration: 0.4)))
+            }
         }
     }
 }

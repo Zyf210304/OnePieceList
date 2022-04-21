@@ -15,6 +15,7 @@
 		021A6D0E2810FC250015CE31 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A6D0D2810FC250015CE31 /* HomeScreenView.swift */; };
 		021A6D112810FF420015CE31 /* HomeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A6D102810FF420015CE31 /* HomeComponents.swift */; };
 		021A6D13281104640015CE31 /* WelcomeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A6D12281104640015CE31 /* WelcomeComponents.swift */; };
+		021A6D162811486B0015CE31 /* PageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A6D152811486B0015CE31 /* PageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		021A6D0D2810FC250015CE31 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		021A6D102810FF420015CE31 /* HomeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComponents.swift; sourceTree = "<group>"; };
 		021A6D12281104640015CE31 /* WelcomeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeComponents.swift; sourceTree = "<group>"; };
+		021A6D152811486B0015CE31 /* PageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		021A6CFB2810EA490015CE31 /* OnePieceList */ = {
 			isa = PBXGroup;
 			children = (
+				021A6D14281143790015CE31 /* ViewModel */,
 				021A6D0F2810FF0A0015CE31 /* Components */,
 				021A6D0A2810F79B0015CE31 /* View */,
 				021A6CFC2810EA490015CE31 /* OnePieceListApp.swift */,
@@ -93,6 +96,14 @@
 				021A6D12281104640015CE31 /* WelcomeComponents.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		021A6D14281143790015CE31 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				021A6D152811486B0015CE31 /* PageViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +179,7 @@
 				021A6D0C2810F7B00015CE31 /* WelcomeScreenView.swift in Sources */,
 				021A6CFF2810EA490015CE31 /* ContentView.swift in Sources */,
 				021A6CFD2810EA490015CE31 /* OnePieceListApp.swift in Sources */,
+				021A6D162811486B0015CE31 /* PageViewModel.swift in Sources */,
 				021A6D0E2810FC250015CE31 /* HomeScreenView.swift in Sources */,
 				021A6D13281104640015CE31 /* WelcomeComponents.swift in Sources */,
 				021A6D112810FF420015CE31 /* HomeComponents.swift in Sources */,

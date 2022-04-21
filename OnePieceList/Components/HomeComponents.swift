@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct HeaderView: View {
+    
+    @EnvironmentObject var  vm: PageViewModel
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         HStack {
             
@@ -27,6 +32,16 @@ struct HeaderView: View {
                 .resizable()
                 .frame(width: 50, height: 50)
                 .clipShape(Circle())
+                .onTapGesture {
+                
+                    if vm.App_first {
+                        
+                        self.presentationMode.wrappedValue.dismiss()
+                    } else {
+                        
+                        vm.App_first = true
+                    }
+                }
         }
     }
 }

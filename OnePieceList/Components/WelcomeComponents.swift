@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct NextBtn: View {
+struct NextView: View {
     var body: some View {
 
 //        Button {
@@ -31,16 +31,86 @@ struct NextBtn: View {
             .padding(.horizontal, 20)
             .background {
 
-                Color.orange
+                Color.green
                     .opacity(0.5)
                     .cornerRadius(20)
             }
 //        }
         
     }
+
+}
+
+struct NextBtn: View {
     
-    func  gotoHomeView() {
+    
+    @Binding var isGoHome: Bool
+    
+    var body: some View {
+
+        Button {
+
+            //something
+            
+            isGoHome = true
+            
+        } label: {
+            
+            HStack {
+                
+                Text("Next")
+                    .font(.system(size: 20))
+                    .fontWeight(.semibold)
+                
+                Image(systemName: "arrowshape.turn.up.right")
+            }
+            .foregroundColor(.white)
+            .padding(.vertical, 12)
+            .padding(.horizontal, 20)
+            .background {
+
+                Color.orange
+                    .opacity(0.5)
+                    .cornerRadius(20)
+            }
+        }
         
-       
     }
+
+}
+
+
+struct NextBtnRed: View {
+    
+    @EnvironmentObject var  vm: PageViewModel
+    
+    var body: some View {
+
+        Button {
+
+            vm.App_first = false
+            
+        } label: {
+            
+            HStack {
+                
+                Text("Next")
+                    .font(.system(size: 20))
+                    .fontWeight(.semibold)
+                
+                Image(systemName: "arrowshape.turn.up.right")
+            }
+            .foregroundColor(.white)
+            .padding(.vertical, 12)
+            .padding(.horizontal, 20)
+            .background {
+
+                Color.red
+                    .opacity(0.5)
+                    .cornerRadius(20)
+            }
+        }
+        
+    }
+
 }
